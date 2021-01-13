@@ -35,12 +35,10 @@ for (let i = hacker1.length - 1; i >= 0; i--) {
 }
 console.log(build)
 
-if (hacker1 < hacker2) {
+if (hacker1 > hacker2) {
   console.log("The driver goes first")
-} else if (hacker2 < hacker1) {
-  console.log("YO, the navigator goes first")
+} else if (hacker2 > hacker1) {
 } else {
-  console.log("You both have the same name, flip a coin")
 }
 
 const lorem =
@@ -57,7 +55,7 @@ for (let i = 1; i < lorem.length; i++)
 function isPalindrome(str) {
   str = str.replace(/[^\w]/g, "").toLowerCase()
   const end = str.length - 1
-  for (let i = 0; i < Math.ceil(end / 2); i++)
+  for (let i = 0; i < Math.floor(end / 2); i++)
     if (str[i] != str[end - i]) return false
 
   return true
